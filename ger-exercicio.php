@@ -5,7 +5,7 @@ C:\xampp\htdocs
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
-    <title>Index - PHP</title>
+    <title>Exercícios</title>
 
 </head>
 <body>
@@ -13,7 +13,7 @@ C:\xampp\htdocs
 
     <main class="container" style="margin-top: 80px;">
       <div class="mt-5"> 
-      <h4>Cadastro de grupo muscular</h4>
+      <h4>Cadastro de exercícios</h4>
       </div>
 
       <div class="card">
@@ -23,7 +23,7 @@ C:\xampp\htdocs
           <input type="text" name="nome" id="nome" class="form-control">
         </div>
         <div class="col-12 mt-3" >
-        <a href="gmuscular.php" class="btn btn-secondary" >Voltar</a>
+        <a href="exercicios.php" class="btn btn-secondary" >Voltar</a>
         <button type="submit" class="btn btn-primary">Salvar</button>
 
 

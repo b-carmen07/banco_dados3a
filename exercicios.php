@@ -5,17 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">    
-  <title>Index - PHP</title>
+  <title>Exercícios</title>
 
 </head>
 <body>
     
-  <?php require_once "_parts/_menu.php"?>  
+  <?php require_once "_parts/_menu.php";
+  
+  spl_autoload_register(function ($class) {
+    require_once"class/{$class}.class.php";
+    });
+
+  $exercicio = new Exercicio();
+  $exercicios = $exercicio->all();
+  
+  ?> 
+
 
      <main class="container">
         <div class="mt-5 d-flex justify-content-between p-5 ">
-            <h3 class>Grupos Musculares</h3>
-            <a href="ger-gmusc.php" class="btn btn-success">Novo Grupo Muscular</a>
+            <h3 class>Exercícios</h3>
+            <a href="ger-exercicio.php" class="btn btn-success">Novo exercício</a>
         </div>
         <div>
           <table class="table">
@@ -24,18 +34,25 @@
                 <th class="text-center table-light">#</th>
                 <th class = "table-light ">Nome</th>
                 <th class=" text-center table-light">Ações</th>
+
+                <?php
+                // Laço de repetição 
+                foreach ($exercicios as $exerc) :
+                ?>
+
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="text-center ">1</td>
-                <td>Ombro</td>
+                <td><?php echo $exerc-> nome?></td>
                 <td class="text-center">
                   <a href="#"class="btn btn-sm btn-secondary"><i class="bi bi-eye"></i></a>
                   <a href="#"class="btn btn-sm btn-primary"><i class="bi bi-pencil-square"></i></a>
                   <a href="#"class="btn btn-sm btn-danger" ><i class="bi bi-trash"></i></a>
                   </td>
               </tr>
+              <?php endforeach?>
             </tbody>
           </table>
         </div>

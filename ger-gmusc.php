@@ -1,0 +1,44 @@
+C:\xampp\htdocs 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <title>Index - PHP</title>
+
+</head>
+<body>
+    <?php require_once "_parts/_menu.php"?>
+
+    <main class="container" style="margin-top: 80px;">
+      <div class="mt-5"> 
+      <h4>Cadastro de grupo muscular</h4>
+      </div>
+
+      <div class="card">
+      <!-- metodos de enviar um formulario: get e post  -->
+        <form action="" method="post" class="row g3 mt-3 p-3">
+          <div class="col-12"> <label for="nome">Nome</label> 
+          <input type="text" name="nome" id="nome" class="form-control">
+        </div>
+        <div class="col-12 mt-3" >
+        <a href="gmuscular.php" class="btn btn-secondary" >Voltar</a>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+
+
+        </div>
+
+
+        </form>
+
+    
+      </div>
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

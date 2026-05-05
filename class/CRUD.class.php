@@ -18,6 +18,6 @@
         $sql = "SELECT * FROM $this->table";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
         }
  }

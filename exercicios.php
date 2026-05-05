@@ -11,6 +11,7 @@
 <body>
     
   <?php require_once "_parts/_menu.php";
+
   
   spl_autoload_register(function ($class) {
     require_once"class/{$class}.class.php";
@@ -27,37 +28,48 @@
             <h3 class>Exercícios</h3>
             <a href="ger-exercicio.php" class="btn btn-success">Novo exercício</a>
         </div>
+
+        <div class= "mt-4"> </div>
+         <div class= "mb-3"> </div>
+         <input type="text" name="campo-filtro" id="campo-filtro" class="form-control" placeholder="🔍 Digite para filtrar" title ="Digite para filtrar pelo nome do exercício">
+         
         <div>
-          <table class="table">
+          <table class="table" id="tabela-exercicios">
+
             <thead>
               <tr>
-                <th class="text-center table-light">#</th>
-                <th class = "table-light ">Nome</th>
-                <th class=" text-center table-light">Ações</th>
+                <th class="text-center table-dark">#</th>
+                <th class = "table-dark ">Nome</th>
+                <th class=" text-center table-dark">Ações</th>
 
+                 </tr>
+            </thead>
+            <tbody>
                 <?php
                 // Laço de repetição 
                 foreach ($exercicios as $exerc) :
                 ?>
 
-              </tr>
-            </thead>
-            <tbody>
+            
               <tr>
-                <td class="text-center ">1</td>
-                <td><?php echo $exerc-> nome?></td>
+                <td class="text-center "> <?=$exerc->idexercicio ?></td>
+                <td><?php echo $exerc->nome ?></td>
+              
                 <td class="text-center">
                   <a href="#"class="btn btn-sm btn-secondary"><i class="bi bi-eye"></i></a>
                   <a href="#"class="btn btn-sm btn-primary"><i class="bi bi-pencil-square"></i></a>
                   <a href="#"class="btn btn-sm btn-danger" ><i class="bi bi-trash"></i></a>
                   </td>
               </tr>
-              <?php endforeach?>
+              <?php endforeach; ?>
             </tbody>
           </table>
         </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/tb-interativa.js"></script>
+    <script src="js/exercicios.js"></script>
 </body>
 </html>

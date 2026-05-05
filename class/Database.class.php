@@ -9,10 +9,10 @@ private function __construct(){
     $config = parse_ini_file(__DIR__."/../config.ini", true)["database"];
     $dns = "";
     if($config["driver"] === "mysql"){
-        $dns = "mysql:host={$config['host']}; port={$config['port']}; dbname= {$config['data']}; charset = utf8";
+        $dns = "mysql:host={$config['host']}; port={$config['port']}; dbname={$config['data']};charset=utf8";
     }
     elseif($config["driver"] === "pgsql"){
-        $dns = "pgsql:host={$config['host']}; port={$config['port']}; dbname= {$config['data']}; charset = utf8";
+        $dns = "pgsql:host={$config['host']}; port={$config['port']}; dbname={$config['data']};charset=utf8";
     }
     else{
         throw new Exception("Driver de banco de dados não suportado". $config["driver"]);

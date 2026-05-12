@@ -57,7 +57,7 @@
               
                 <td class="text-center">
                   <a href="#"class="btn btn-sm btn-secondary"><i class="bi bi-eye"></i></a>
-                  <a href="#"class="btn btn-sm btn-primary"><i class="bi bi-pencil-square"></i></a>
+                  <a href="ger-exercicio.php?id=<?=$exerc->idexercicio ?>"class="btn btn-sm btn-primary"><i class="bi bi-pencil-square"></i></a>
                   <a href="#"class="btn btn-sm btn-danger" ><i class="bi bi-trash"></i></a>
                   </td>
               </tr>
